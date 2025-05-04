@@ -1,12 +1,12 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import util
 from flask_cors import CORS
-app = Flask(__name__)
+app = Flask(__name__,template_folder='templates', static_folder='static')
 CORS(app)
 
 @app.route('/')
 def home():
-    return "Welcome to the Home Price Prediction API!"
+    return render_template('app.html')
 
 @app.route('/get_location_names')
 def get_location_names():

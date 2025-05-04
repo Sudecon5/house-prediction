@@ -33,7 +33,7 @@ def load_saved_artifacts():
 
     global __model
     if __model is None:
-        with open('/Users/sudiptapriyamkakoty/Documents/BHP/server/artifacts/Home_price_prediction.pickle', 'rb') as f:
+        with open('./artifacts/Home_price_prediction.pickle', 'rb') as f:
             __model = pickle.load(f)
     print("loading saved artifacts...done")
 
