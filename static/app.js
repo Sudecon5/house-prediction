@@ -1,3 +1,5 @@
+const apiBaseUrl = "https://house-prediction-p7qa.onrender.com";
+
 function getBathValue() {
     var uiBathrooms = document.getElementsByName("uiBathrooms");
     for(var i in uiBathrooms) {
@@ -26,8 +28,9 @@ function getBathValue() {
     var location = document.getElementById("uiLocations");
     var estPrice = document.getElementById("uiEstimatedPrice");
   
-     var url = "http://127.0.0.1:5000/predict_home_price"; //Use this if you are NOT using nginx which is first 7 tutorials
+    // var url = "http://127.0.0.1:5000/predict_home_price"; //Use this if you are NOT using nginx which is first 7 tutorials
     //var url = "/api/predict_home_price"; // Use this if  you are using nginx. i.e tutorial 8 and onwards
+    var url = apiBaseUrl + "/predict_home_price";
   
     $.post(url, {
         total_sqft: parseFloat(sqft.value),
@@ -43,7 +46,8 @@ function getBathValue() {
   
   function onPageLoad() {
     console.log( "document loaded" );
-    var url = "http://127.0.0.1:5000/get_location_names"; // Use this if you are NOT using nginx which is first 7 tutorials
+    var url = apiBaseUrl + "/get_location_names";  
+    //var url = "http://127.0.0.1:5000/get_location_names"; // Use this if you are NOT using nginx which is first 7 tutorials
     //var url = "/api/get_location_names"; // Use this if  you are using nginx. i.e tutorial 8 and onwards
     $.get(url,function(data, status) {
         console.log("got response for get_location_names request");
