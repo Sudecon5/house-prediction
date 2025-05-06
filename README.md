@@ -7,7 +7,8 @@ The house price prediction model uses sklearn library and linear regression to p
 * Dimensionality reduction</br>
 * Gridsearchcv for Hyperparameter tuning</br>
 * K Cross Validation</br>
-# Technology and tools used-
+
+## Technology and tools used-</br>
 1. Python</br>
 2. Numpy and Pandas for data cleaning</br>
 3. Matplotlib for data visualization</br>
