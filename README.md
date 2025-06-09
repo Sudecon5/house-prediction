@@ -15,4 +15,4 @@ The house price prediction model uses sklearn library and linear regression to p
 4. Sklearn for model building</br>
 5. Jupyter notebook, visual studio code and pycharm for IDE</br>
 6. Python flask for http server</br>
-7. HTML/CSS/Javascript for UI  </br>
+7. HTML for UI  </br>
